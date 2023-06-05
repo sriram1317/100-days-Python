@@ -1,4 +1,4 @@
-# Exercise: Write a program that sitches values stored in variables a and b
+# Exercise: Write a program that switches values stored in variables a and b
 
 # Snippet 1
 a = input("Provide value for a: ")
