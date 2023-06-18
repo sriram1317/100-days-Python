@@ -11,8 +11,6 @@
 # 8: win/loss response
 
 
-# 1: Generate or pick randon word.
-
 import random
 import os
 import hangmanData as hd    
