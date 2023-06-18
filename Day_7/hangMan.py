@@ -15,9 +15,11 @@
 
 import random
 import os
+import hangmanData as hd    
 
-words = ["pleasant", "shark", "tolerate", "husband", "effort","spare","skeleton","top","humanity","ideal"]
+words = []
 usedWords = []
+usedLetter = []
 endOfGame = False
 
 def getWord(words, usedWords):
@@ -43,28 +45,36 @@ spaces = []
 for i in word:
     spaces += '_'
 
+hd.logo()
 print(f"Word={word}")
 
 
 while endOfGame == False:   
     
-    # print(f"Spaces={spaces}")
     guess = input("Guess the letter: ")
     os.system('cls')
-    if guess in word:
+
+    if word in usedLetter:
+        print(f"You have already guessed the letter {guess}, try again")
+    
+    elif guess in word:
         
         print(f"Correct!, letter {guess} is present")
         spaces = replaceSpace(spaces, guess, word)
+        usedLetter += word
         print(f"Spaces={spaces}")
         c = word.count(guess)
         remLetters -= c
     
     else:
-        print("Wrong")
+        print(f"You guessed {guess}, Wrong! that's not in the word. You lose a life")
+        
         print(spaces)
 
         life -= 1
-    
+
+    hd.stages(life)
+
     if remLetters == 0 or life == 0:
         endOfGame = True
 
