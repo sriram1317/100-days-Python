@@ -1,10 +1,5 @@
 import random
 
-def loadWords():
-    words = open("words.txt").read().split()
-    print(random.choice(words))
-
-
 def logo():
     logo = """ 
  _                                                     
@@ -80,4 +75,6 @@ def stages(n):
 
     print(stages[n])
 
-print(loadWords)
+words = open('words.txt').read().split()
+
+

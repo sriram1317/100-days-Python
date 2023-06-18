@@ -17,7 +17,7 @@ import random
 import os
 import hangmanData as hd    
 
-words = []
+words = hd.words
 usedWords = []
 usedLetter = []
 endOfGame = False
