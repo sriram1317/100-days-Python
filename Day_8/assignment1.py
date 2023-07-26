@@ -28,9 +28,9 @@
 # greet("Hello world")    ///Function call with an argument
 
 
-# def greet():
-#     print("Hello")
-#     print("World")
-#     print("!!")
+def greet():
+    print("Hello")
+    print("World")
+    print("!!")
 
-# greet()   //Basic function call
+greet()   #//Basic function call
